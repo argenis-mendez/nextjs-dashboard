@@ -18,66 +18,66 @@ export default async function InvoicesTable({
       amount: 44800,
       date: '2023-09-10T04:00:00.000Z',
       status: 'paid',
-      name: 'Michael Novotny',
-      email: 'michael@novotny.com',
-      image_url: '/customers/michael-novotny.png',
-      address: 'Urbanización Alberto Ravel',
-      phone: '+584148523497',
+      name: 'Banco del Caribe, C.A. Banco Universal',
+      email: 'michael@bancocaribe.com',
+      address: 'Avenida Francisco de Miranda, cruce con calle El Parque y Avenida Mohedano, Edificio Centro Empresarial Galipán, Torre Bancaribe',
+      phone: '02128453297',
+      rif: 'J-000029490'
     },
     {
       id: '2992fecb-71c7-484e-a40b-3c4e3ac5fe6d',
       amount: 500,
       date: '2023-08-19T04:00:00.000Z',
       status: 'paid',
-      name: 'Delba de Oliveira',
-      email: 'delba@oliveira.com',
-      image_url: '/customers/delba-de-oliveira.png',
-      address: 'Urbanización Alberto Ravel',
-      phone: '+584148523497',
+      name: 'Alfonzo Rivas & Cia, C.A.',
+      email: 'serviciocliente@alfonzorivas.com',
+      address: ' Av. La Estancia, Edificio General, Piso 8, Urb. Chuao.',
+      phone: '02122487935',
+      rif: 'J-000315310'
     },
     {
       id: '9bbdc002-df1d-4de1-bfac-99eb4e4c3c12',
       amount: 34577,
       date: '2023-08-05T04:00:00.000Z',
       status: 'pending',
-      name: 'Balazs Orban',
-      email: 'balazs@orban.com',
-      image_url: '/customers/balazs-orban.png',
-      address: 'Urbanización Alberto Ravel',
-      phone: '+584148523497',
+      name: 'A.C. Centro Medico Docente La Trinidad',
+      email: 'contacto@centromedico.com',
+      address: 'Av. Principal de El Hatillo, Caracas 1083, Distrito Capital',
+      phone: '02128134975',
+      rif: 'J-000315310'
     },
     {
       id: '4a1438a3-4199-4190-bb9a-334b9970404c',
       amount: 54246,
       date: '2023-07-16T04:00:00.000Z',
       status: 'pending',
-      name: 'Lee Robinson',
-      email: 'lee@robinson.com',
-      image_url: '/customers/lee-robinson.png',
-      address: 'Urbanización Alberto Ravel',
-      phone: '+584148523497',
+      name: 'Manufacturas de Papel, C.A. (Manpa) S.A.C.A.',
+      email: 'cliente@manpa.com',
+      address: 'Maracay, Aragua, Venezuela.',
+      phone: '02437592498',
+      rif: 'J-000235309'
     },
     {
       id: '66ba6dad-d6d4-4c94-840a-240583961fe8',
       amount: 666,
       date: '2023-06-27T04:00:00.000Z',
       status: 'pending',
-      name: 'Evil Rabbit',
-      email: 'evil@rabbit.com',
-      image_url: '/customers/evil-rabbit.png',
-      address: 'Urbanización Alberto Ravel',
-      phone: '+584148523497',
+      name: 'Seguros Venezuela C.A.',
+      email: 'servicio.cliente@segurosvenezuela.com',
+      address: 'Av. Francisco de Miranda, Edf. Seguros Venezuela, Piso 8 y 9. Urb. Campo Alegre. Caracas',
+      phone: '02128523497',
+      rif: 'J-000340366'
     },
     {
       id: 'f9ff6e41-8a60-432e-bccf-cf557605b684',
       amount: 1250,
       date: '2023-06-17T04:00:00.000Z',
       status: 'paid',
-      name: 'Amy Burns',
-      email: 'amy@burns.com',
-      image_url: '/customers/amy-burns.png',
-      address: 'Urbanización Alberto Ravel',
-      phone: '+584148523497',
+      name: 'Ceramica Carabobo S.A.C.A.',
+      email: 'contacto@ceramicas.com',
+      address: 'Troncal11, Valencia 2001, Carabobo',
+      phone: '02415796425',
+      rif: 'J-000063435'
     }
   ];
   return (
@@ -136,7 +136,7 @@ export default async function InvoicesTable({
             <thead className="rounded-lg text-left text-sm font-normal">
               <tr>
                 <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
-                  Nombres y Apellidos
+                  Cliente
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
                   Contacto
@@ -161,7 +161,7 @@ export default async function InvoicesTable({
                   key={invoice.id}
                   className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
                 >
-                  <td className="whitespace-nowrap py-3 pl-6 pr-3">
+                  <td className="py-3 pl-6 pr-3">
                     <div className="flex items-center gap-3">
                       {/* <Image
                         src={invoice.image_url}
@@ -188,6 +188,7 @@ export default async function InvoicesTable({
                     <p>{invoice.email}</p>
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
+                    <p>{invoice.rif}</p>
                     {formatCurrency(invoice.amount)}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">

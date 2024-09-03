@@ -14,8 +14,8 @@ const links = [
   { name: 'Inicio', href: '/dashboard', icon: HomeIcon },
   { name: 'Clientes', href: '/dashboard/customers', icon: UserGroupIcon },
   {
-    name: 'Incidentes',
-    href: '/dashboard/invoices',
+    name: 'Reportes',
+    href: '/',
     icon: DocumentDuplicateIcon,
   }
 ];

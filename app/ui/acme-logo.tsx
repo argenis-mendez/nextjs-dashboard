@@ -11,8 +11,8 @@ export default function AcmeLogo() {
       <p className="text-[44px]">Acme</p> */}
       <Image
         src="/logo-daycohost-para-uso-sobre-fondos-con-color.png"
-        width={860}
-        height={860}
+        width={500}
+        height={500}
         className="h-36 w-36"
         alt="Screenshots of the dashboard project showing desktop version"
       />

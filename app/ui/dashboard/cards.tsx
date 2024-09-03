@@ -24,11 +24,13 @@ export default async function CardWrapper() {
   return (
     <>
       {/* NOTE: Uncomment this code in Chapter 9 */}
-      <Card title="Pedidos Abiertos" value={numberOfInvoices} type="invoices" />
+      <Card title="Clientes Nuevos" value={25} type="customers" />
+      <Card title="Clientes Desincorporados" value={10} type="customers" />
+      <Card title="Pedidos Abiertos" value={numberOfInvoices} type="pending" />
       <Card
         title="Pedidos Cerrados"
         value={numberOfCustomers}
-        type="customers"
+        type="invoices"
       />
     </>
   );
